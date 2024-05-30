@@ -1,0 +1,91 @@
+.block_four{
+    margin: 0 7vw;
+    @font-face {
+        font-family: "AbyssinicaSIL";
+        src: local("AbyssinicaSIL-Regular.ttf");
+    }
+    &_h2{
+        margin-top: 10vw;
+        font-family:"AbyssinicaSIL";
+        font-size: 5vw;
+    }
+    .block_four_tab{
+        border-top: 1px solid #ccc;
+        padding: 3vw 0vw;
+        font-family: "AbyssinicaSIL";
+        .block_four_tablinks{
+            background-color: inherit;
+            // float: left;
+            border: transparent;
+            
+            outline: none;
+            cursor: pointer;
+            margin: 3vw 6vw;
+            transition: 0.3s;
+            font-size: 2.5vw;
+            text-decoration: none;
+            color: #8a8a8a;
+        }
+        .block_four_tablinks:hover{
+            color: #000;
+        }
+        .block_four_tablinks:active{
+            background-color: #000;
+        }
+    }
+    .block_four_tabcontent{
+        display: none;
+        padding: 0.6vw 1.2vw;
+        clear: both;
+        &:target{
+            display: flex;
+            justify-content: space-between;
+            
+        }
+        .block_four_line{
+            .block_four_image{
+                img{
+                    width: 30vw;
+                }
+                p{
+                    font-size: 2.5vw;
+                }
+            }
+        }
+        .block_four_image{
+            img{
+                width: 30vw;
+            }
+            p{
+                font-size: 2.5vw;
+            }
+        }
+        
+    }
+}
+@media (max-width:375px) {
+    .block_four{
+        .block_four_tab{
+            .block_four_tablinks{
+                font-size: 4.5vw;
+            }
+        }
+        .block_four_tabcontent{
+            &:target{
+                display: flex;
+                flex-direction: column;
+                .block_four_image{
+                    img{
+                        width: 70vw;
+                    }
+                }
+                .block_four_description{
+                    p{
+                        font-size: 5vw;
+                    }
+                }
+            }
+        }
+        
+    }
+}

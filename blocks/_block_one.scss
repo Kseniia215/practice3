@@ -1,0 +1,144 @@
+body{
+    @font-face {
+        font-family: "AbyssinicaSIL";
+        src: local("AbyssinicaSIL-Regular.ttf");
+    }
+    background-color: #f4f4f4;
+    margin:0;
+    .block_one{
+        // max-width: 1280px;
+        margin: 0 7vw;
+        @font-face {
+            font-family: "AbyssinicaSIL";
+            src: local("AbyssinicaSIL-Regular.ttf");
+        }
+        .block_one_about{
+            margin-top: 8vw;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            .block_one_text{
+                text-align: center;
+                width: 80vw;
+                .block_one_h1{
+                    font-family: "AbyssinicaSIL";
+                    font-weight: bold;
+                    font-size: 5vw;
+                }
+                .block_one_p{
+                    font-family: "Roboto";
+                    letter-spacing: 3px;
+                    font-size: 2.5vw;
+                }
+            }
+            .block_one_img{
+                margin-top: 6vw;
+                display: flex;
+                justify-content: space-between;
+                .block_one_img1{
+                    margin-right: 2vw;
+                        width: 30vw;
+                    // width: 380px;
+                    // height: 503px;
+                }
+                .block_one_img2{
+                    margin-right: 2vw;
+                    padding-top: 5vw;
+                    width: 30vw;
+                    // width: 380px;
+                    // height: 503px;
+                }
+                .block_one_img3{
+                    margin-right: 2vw;
+                    width: 30vw;
+                    // width: 380px;
+                    // height: 503px;
+                }
+            }
+        }
+            .block_one_h2{
+                margin-top: 10vw;
+                font-family:"AbyssinicaSIL";
+                font-size: 5vw;
+            }
+        
+            .block_one_tab{
+                border-top: 1px solid #ccc;
+                font-family: "AbyssinicaSIL";
+                .block_one_tablinks{
+                    background-color: inherit;
+                    float: left;
+                    border: none;
+                    outline: none;
+                    cursor: pointer;
+                    padding: 3vw 6vw;
+                    transition: 0.3s;
+                    font-size: 2.5vw;
+                    text-decoration: none;
+                    color: #8a8a8a;
+                }
+                .block_one_tablinks:hover{
+                    color: #000;
+                }
+                .block_one_tablinks:active{
+                    background-color: #000;
+                }
+            }
+            .block_one_tabcontent{
+                display: none;
+                padding: 0.6vw 1.2vw;
+                clear: both;
+                &:target{
+                    display: flex;
+                    justify-content: space-between;
+                }
+                .block_one_image{
+                    img{
+                        width: 30vw;
+                    }
+                }
+                .block_one_description{
+                    p{
+                        font-size: 2.5vw;
+                    }
+                }
+            }
+}
+}
+@media (max-width:375px) {
+    body{
+        .block_one{
+            .block_one_about{
+                .block_one_text{
+                    width: 60vw;
+                    .block_one_p{
+                        font-size: 4vw;
+                    }
+                }
+            }
+        
+        .block_one_tab{
+            .block_one_tablinks{
+                font-size: 5vw;
+            }
+        }
+        .block_one_tabcontent{
+            &:target{
+                display: flex;
+                flex-direction: column;
+            
+                .block_one_image{
+                    img{
+                        width: 70vw;
+                    }
+                }
+                .block_one_description{
+                    p{
+                        font-size: 5vw;
+                    }
+                }
+            }
+        }
+    }
+    }
+}

@@ -1,0 +1,102 @@
+.block_five{   
+    margin: 0 7vw;
+    @font-face {
+        font-family: "AbyssinicaSIL";
+        src: local("AbyssinicaSIL-Regular.ttf");
+    }
+    &_order{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        .block_five_h3{
+            margin-top: 10vw;
+            font-size: 3.6vw;
+        }
+        .block_five_btn{
+        cursor: pointer;
+        display: block;
+        margin: 2.5vw auto;
+        background-color: black;
+        color: #fff;
+        font-size: 1.8vw;
+        padding: 1.5vw 3.5vw;
+        border-radius: 15px;
+        }
+    }
+    .modal {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 100;
+        width: 100%;
+        height: 100%;
+        overflow: auto;
+        background-color: rgba(0, 0, 0, 0.4);
+        .modal__content {
+            // display: flex;
+            // flex-direction: column;
+            // align-items: center;
+            width: 80vw;
+            max-width: 70vw;
+            margin: 10vw auto;
+            box-shadow: 1px 1px 10px #777777;
+            padding: 3.5vw;
+            background-color: #fff;
+            /* Для анимации */
+            position: relative;
+            animation-name: animatetop;
+            animation-duration: 0.4s;
+            form{
+                label{
+                    margin: 1vw;
+                }
+                input{
+                    margin: 1vw;
+                }
+            }
+            button{
+                background-color: black;
+                color: white;
+                border-radius: 1vw;
+                padding: 1vw 1vw;
+                margin-left: 60vw;
+                font-size: 1.5vw;
+            }
+           }
+           .modal__close, .modal__closeBtn {
+                font-size: 4vw;
+                color: #777777;
+                cursor: pointer;
+                float: right;
+            }
+            @keyframes animatetop {
+                from {
+                top: -30vw;
+                opacity: 0;
+                }
+                to {
+                top: 0;
+                opacity: 1;
+                }
+            }
+       }
+       .modal_active {
+        display: block;
+       }
+    
+}
+@media (max-width:375px) {
+    .block_five{
+        &_order{
+            text-align: center;
+            .block_five_h3{
+                font-size: 6vw;
+            }
+            .block_five_btn{
+                font-size: 3.5vw;
+                padding: 3vw 6vw;
+            }
+        }
+    }
+}

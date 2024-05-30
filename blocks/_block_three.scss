@@ -1,0 +1,91 @@
+body{   
+    @font-face {
+        font-family: "AbyssinicaSIL";
+        src: local("AbyssinicaSIL-Regular.ttf");
+    }
+    background-color: #f4f4f4;
+    margin:0; 
+    .block_three{
+        
+        margin: 0 7vw;
+        @font-face {
+        font-family: "AbyssinicaSIL";
+        src: local("AbyssinicaSIL-Regular.ttf");
+        display: grid;
+        grid-template-columns: 20vw auto;
+        gap: 2vw;
+        }
+        &_h2{
+            margin-top: 10vw;
+            font-family:"AbyssinicaSIL";
+            font-size: 5vw;
+        }
+        
+        .accordion {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: space-between;
+            width: 70vw;
+        }
+        .accordion, #All {
+            display: inline-block;
+            vertical-align: top;
+        }
+        #All{
+            padding: 0vw 10vw;
+        }
+        .line{
+            background-color: #7c7c7c;
+            width: 70vw;
+            height: 1px;
+        }
+        .accordion-head {
+            cursor: pointer;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: flex-start; 
+            gap: 2.5vw;
+            font-size: 3vw;
+        }
+        .accordion-head.active-p + .accordion-block {
+            display: block;
+            border: 3px;
+            border-color: black;
+        }
+        
+        .accordion-head.active-style {
+            color: #7c7c7c;
+        }
+        
+        .accordion-block {
+            max-height: 0;
+            opacity: 0;
+            transition: all 0.3s ease-out;
+            overflow: hidden;
+            font-weight: 400;
+            font-size: 2.5vw;
+            text-align: justify;
+            border-radius: 15px;
+            padding: 1%;
+        }
+        .accordion-block.active-content {
+            opacity: 1;
+            overflow: visible;
+        }
+
+    }
+}
+@media (max-width:375px) {
+    body{
+        .block_three{
+            .accordion-head{
+                font-size: 5vw;
+            }
+            .accordion-block{
+                font-size: 3.5vw;
+            }
+        }
+    }
+}

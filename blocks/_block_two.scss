@@ -1,0 +1,90 @@
+body{   
+    @font-face {
+        font-family: "AbyssinicaSIL";
+        src: local("AbyssinicaSIL-Regular.ttf");
+    }
+    background-color: #f4f4f4;
+    margin:0;
+    .block_two{
+        // max-width: 1280px;
+        margin: 0 7vw;
+        @font-face {
+        font-family: "AbyssinicaSIL";
+        src: local("AbyssinicaSIL-Regular.ttf");
+        }
+        &_h2{
+            margin-top: 10vw;
+            font-family:"AbyssinicaSIL";
+            font-size: 5vw;
+        }
+        .block_two_slider {
+            position: relative;
+            overflow: hidden;
+            .block_two_slide-track {
+                display: flex;
+                animation: scroll 40s linear infinite;
+                .block_two_slide{
+                    img{
+                        width: 30vw;
+                    }
+                    p{
+                        font-size: 2.5vw;
+                    }
+                }
+                .block_two_slide {
+                    margin-right: 5vw;
+                }
+            }
+            .block_two_slide-arrow {
+                position: absolute;
+                top: 12vw;
+                transform: translateX(-50%);
+                border: none;
+                background: None;
+                cursor: pointer;
+                img{
+                    width: 4vw;
+                }
+                &.prev {
+                    left: 2%;
+                }
+                &.next {
+                    left: 98%;
+                }
+            }
+        }
+    }
+}
+@media (max-width:375px) {
+    body{
+        .block_two{
+            .block_two_slider{
+                .block_two_slide-track{
+                    .block_two_slide{
+                        img{
+                            width: 70vw;
+                        }
+                        p{
+                            font-size: 5vw;
+                        }
+                    }
+                }
+            
+            .block_two_slide-arrow{
+                transform: translateX(-100%);
+                img{
+                    margin-top: 20vw;
+                    width: 7vw;
+                }
+                &.prev {
+                    left: 15%;
+                }
+                &.next {
+                    left: 100%;
+                }
+                
+            }
+        }
+        }
+    }
+}
